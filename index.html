@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <title>Flight shedule</title>
+</head>
+<body>
+    <div class="header"></div>
+    <!-- <div class="page-name">Расписание авиарейсов аэропорта Шереметьево</div> -->
+    <div class="menu">
+        <button onclick="Departure()">Вылет</button>
+        <button onclick="Arrive()">Прибытие</button>
+        <button onclick="Delayed()">Задержаны</button>
+    </div>
+    <div class="flight-table">
+        <p class="main-comment"></p>
+        <input type="text" name="input" placeholder="поиск по № рейса" oninput="Search(this)">
+        <table>
+            <thead>
+                <tr>
+                    <th>№ рейса</th>
+                    <th>Авиакомпания</th>
+                    <th>Маршрут</th>
+                    <th>Время по расписанию</th>
+                    <th>Терминал</th>
+                    <th>Статус</th>
+                </tr>
+            </thead>
+            <tbody id='tbody'>
+               
+            </tbody>
+        </table>
+        <div class='loading'>
+            <div class='plane'></div>
+            <div>Загрузка</div>
+        </div>
+    </div>
+    <script src="dist/js/app.js"></script>
+</body>
+</html>
