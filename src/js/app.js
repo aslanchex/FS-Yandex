@@ -12,7 +12,7 @@ function Search(v) {
         td.forEach(i => {
             let firstTr = String(i.firstChild.textContent);
             if (firstTr.match(value)) {
-                i.setAttribute('style', 'dispaly: ;')
+                i.setAttribute('style', 'display: ;')
                 // console.log(i);
             } else {
                 i.setAttribute('style', 'display: none;')
@@ -71,8 +71,7 @@ function push(i, type, fuzzy) {
 }
 
 function createTable(xhr, type, delayed=false) {
-    return new Promise((resolve, reject) => {
-        
+    return new Promise((resolve, reject) => { 
         schedule = JSON.parse(xhr.responseText)[0].schedule;   
         if (!delayed) {
             for (let i in schedule) {
